@@ -11,6 +11,7 @@
 #include <gtkmm/button.h>
 #include <gtkmm/window.h>
 #include <iostream>
+#include "mesh-viewer.h"
 
 class HelloWorld : public Gtk::Window
 {
@@ -29,8 +30,7 @@ private:
 
   //Member widgets:
   Gtk::Box m_box;
-  Gtk::ScrolledWindow m_scrolledWindow; // Main window contents
-  Gtk::TextView m_textView;
+  MeshViewer m_glarea;
   Gtk::Statusbar m_statusbar;
   Glib::RefPtr<Gtk::Builder> m_refBuilder;
   Glib::RefPtr<Gio::SimpleActionGroup> m_refActionGroup;

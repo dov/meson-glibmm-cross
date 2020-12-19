@@ -1,3 +1,5 @@
 *~
 build/
 mingw64/
+*.bak
+build_debug/

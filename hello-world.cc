@@ -65,8 +65,7 @@ HelloWorld::HelloWorld()
     m_box.pack_start(*pMenuBar, Gtk::PACK_SHRINK);
   }
 
-  m_scrolledWindow.add(m_textView);
-  m_box.pack_start(m_scrolledWindow, true, true);
+  m_box.pack_start(m_glarea, true, true);
 
   m_box.pack_start(m_statusbar, false, false);
   m_statusbar.push("Welcome to Hello World");

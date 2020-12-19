@@ -2,16 +2,20 @@ project('gtkmm_example','cpp','c')
 
 sources = ['hello-world-main.cc',
            'hello-world.cc',
+           'mesh-viewer.cc',
+           'trackball.c',
           ]
 
 gtkmmdep = dependency('gtkmm-3.0')
-deps = [gtkmmdep]
+epoxydep = dependency('epoxy')
+fmtdep = dependency('fmt')
+deps = [gtkmmdep, epoxydep, fmtdep]
 
 gnome = import('gnome')
 
 resources = gnome.compile_resources(
   'resources',
-  'example-resource.xml',
+  'resources.xml',
   c_name :'resources'
 )
 
